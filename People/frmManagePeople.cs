@@ -1,4 +1,5 @@
-﻿using DVLD1_BusinessLayer;
+﻿using DVLD1.People;
+using DVLD1_BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,17 +15,20 @@ namespace DVLD1
     public partial class frmManagePeople : Form
     {
         private int _personID { get; set; }
-
         clsPeopleBusiness _clsPeopleBusiness = new clsPeopleBusiness();
-
         public frmManagePeople()
         {
             InitializeComponent();
         }
-
+        private void CountRows()
+        {
+            int Count = dataGridView1.Rows.Count;
+            lblCount.Text = $"[{Count.ToString()}] Person(s) Found";
+        }
         private void _RefreshContactsList()
         {
             dataGridView1.DataSource = clsPeopleBusiness.GetAllPeople();
+            CountRows();
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -57,31 +61,58 @@ namespace DVLD1
         }
         private void frmManagePeople_Load(object sender, EventArgs e)
         {
+            comboBox1.SelectedIndex = 0; // يعرض العنصر الأول (Index = 0)          
+
             _ConfigureGridAppearance();
             _RefreshContactsList();
         }
-
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+                textBox1.Visible = false;
+            else
+                textBox1.Visible = true;
+        }
         private void btnAddNewPerson_Click(object sender, EventArgs e)
         {
             frmAddEditInfoPerson addEditInfoPerson = new frmAddEditInfoPerson();
             addEditInfoPerson.ShowDialog();
             _RefreshContactsList();
         }
-
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPersonDetails personDetails = new frmPersonDetails();
+            personDetails.ShowDialog();
+            _RefreshContactsList();
+        }
         private void addNewPersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddEditInfoPerson addEditInfoPerson = new frmAddEditInfoPerson();
             addEditInfoPerson.ShowDialog();
             _RefreshContactsList();
         }
-
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddEditInfoPerson addEditInfoPerson = new frmAddEditInfoPerson((int)dataGridView1.CurrentRow.Cells[0].Value);
             addEditInfoPerson.ShowDialog();
             _RefreshContactsList();          
         }
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Feature Is Not Implemented Yet!", "Not Ready", MessageBoxButtons.OK);
+        }
+        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Feature Is Not Implemented Yet!","Not Ready",MessageBoxButtons.OK);
+        }
+        private void phoneCallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Feature Is Not Implemented Yet!", "Not Ready", MessageBoxButtons.OK);
+        }
 
-       
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

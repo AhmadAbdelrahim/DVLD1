@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
+    public static class Session
+    {
+        public static string Username { get; set; }
+    }
     public class clsUsersBusiness
     {
         public enum enMode { AddNew = 1, Update = 2 }
@@ -62,23 +66,17 @@ namespace BusinessLayer
             }
         }
 
-        public static clsPeopleBusiness Find(string NationalNo)
+        public static clsUsersBusiness Find(string Username, string Password)
         {
-            int PersonID = -1; string FirstName = ""; string SecondName = ""; string ThirdName = ""; string LastName = "";
-            DateTime DateOfBirth = DateTime.Now; short Gender = 0; string Address = ""; string Phone = ""; string Email = "";
-            int Nationality = -1; string ImagePath = "";
+            int UserID = -1; int PersonID = -1; bool IsActive = false;
 
-            bool IsFound = clsPeopleDataAccess.GetPersonDataByNationalNo
-                            (
-                                ref PersonID, NationalNo, ref FirstName, ref SecondName,
-                                ref ThirdName, ref LastName, ref DateOfBirth, ref Gender,
-                                ref Address, ref Phone, ref Email, ref Nationality, ref ImagePath
-                            );
-
-            if (IsFound)
+            if (clsUsersDataAccess.User(ref UserID, ref PersonID, Username, Password, ref IsActive))
             {
+                // هنا بنعمل كاستنج للـ PermissionValue إلى نوع الـ enum اللي عندنا
+                //enPermissions Permission = (enPermissions)PermissionValue;
+
                 // with parameters إذا بيلاقيه بيرجع الكونستراكتر الكامل 
-                return new clsPeopleBusiness(PersonID, NationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gender, Address, Phone, Email, Nationality, ImagePath);
+                return new clsUsersBusiness(UserID, PersonID, Username, Password, IsActive);
             }
             else
             {
@@ -86,29 +84,23 @@ namespace BusinessLayer
             }
         }
 
-        private bool _AddNewPerson()
+        private bool _AddNewUser()
         {
             //call DataAccessLayer 
-            this.PersonID = clsPeopleDataAccess.AddNewPerson
+            this.UserID = clsUsersDataAccess.AddNewUser
                             (
-                                this.NationalNo, this.FirstName, this.SecondName,
-                                this.ThirdName, this.LastName, this.DateOfBirth,
-                                this.Gender, this.Address, this.Phone, this.Email,
-                                this.Nationality, this.ImagePath
+                                this.Username, this.Password, this.IsActive
                             );
 
-            return (this.PersonID != -1);
+            return (this.UserID != -1);
         }
 
-        private bool _UpdatePersonData()
+        private bool _UpdateUserData()
         {
             //call DataAccessLayer
-            return clsPeopleDataAccess.UpdatePersonData
+            return clsUsersDataAccess.UpdateUserData
                     (
-                        this.PersonID, this.NationalNo, this.FirstName,
-                        this.SecondName, this.ThirdName, this.LastName,
-                        this.DateOfBirth, this.Gender, this.Address,
-                        this.Phone, this.Email, this.Nationality, this.ImagePath
+                        this.UserID, this.Username, this.Password, this.IsActive
                     );
         }
 
@@ -118,7 +110,7 @@ namespace BusinessLayer
             {
                 case enMode.AddNew:
                     {
-                        if (_AddNewPerson())
+                        if (_AddNewUser())
                         {
                             mode = enMode.Update;
                             return true;
@@ -129,31 +121,36 @@ namespace BusinessLayer
                         }
                     }
                 case enMode.Update:
-                    return _UpdatePersonData();
+                    return _UpdateUserData();
             }
             return false;
         }
 
         // أيضاً نستخدم للحذف دالة استاتيك على مستوى الكلاس وليس من خلال الاوبجكت
         // حيث من خلال الاوبجكت يتم حذف الأوبجكت ولكن تظل المعلومات في الميموري
-        public static bool DeletePerson(int PersonID)
+        public static bool DeleteUser(int UserID)
         {
-            return clsPeopleDataAccess.DeletePerson(PersonID);
+            return clsUsersDataAccess.DeleteUser(UserID);
         }
 
-        public static DataTable GetAllPeople()
+        public static DataTable GetAllUsers()
         {
-            return clsPeopleDataAccess.GetAllPeople();
+            return clsUsersDataAccess.GetAllUsers();
         }
 
-        public static bool IsPersonExist(int PersonID)
+        public static bool IsUserExist(int UserID)
         {
-            return clsPeopleDataAccess.IsPersonExist(PersonID);
+            return clsUsersDataAccess.IsUserExist(UserID);
         }
 
-        public static bool IsPersonExist(string NationalNo)
+        public static bool IsUserExist(string Username)
         {
-            return clsPeopleDataAccess.IsPersonExist(NationalNo);
+            return clsUsersDataAccess.IsUserExist(Username);
+        }
+
+        public bool IsEmpty()
+        {
+            return string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password);
         }
     }
 }

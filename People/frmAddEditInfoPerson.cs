@@ -50,7 +50,7 @@ namespace DVLD1
             {
                 cbCountry.Items.Add(row["CountryName"]);
             }
-        }      
+        }
         private void _ResetDefaultValues()
         {
             //This will initialize the reset the default values
@@ -61,6 +61,8 @@ namespace DVLD1
                 lblMode.Text = "Add New Person";
                 _Person = new clsPeopleBusiness();
                 rdbMale.Checked = true;
+                //cbCountry.SelectedIndex = 50;
+
             }
             else
             {
@@ -85,9 +87,9 @@ namespace DVLD1
             dateTimePicker1.MinDate = DateTime.Today.AddYears(-100);
 
             //This will set default country to Egypt
-            cbCountry.SelectedIndex = cbCountry.FindString("Egypt");
+            cbCountry.SelectedIndex = 50;
 
-           txtbFirstName.Text = "";
+            txtbFirstName.Text = "";
             txtbSecondName.Text = "";
             txtbThirdName.Text = "";
             txtbLastName.Text = "";
@@ -99,6 +101,7 @@ namespace DVLD1
         }    
         public void _LoadData()
         {
+
             _Person = clsPeopleBusiness.Find(_PersonID);
 
             if (_Person == null)

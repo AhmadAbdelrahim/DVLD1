@@ -47,5 +47,23 @@ namespace DVLD1
                 return false;
             */
         }
+        public static bool ValidateInteger(string number)
+        {
+            if (string.IsNullOrWhiteSpace(number))
+                return false;
+            return int.TryParse(number, out _);
+        }
+        public static bool ValidateFloat(string number)
+        {
+            if (string.IsNullOrWhiteSpace(number))
+                return false;
+            return float.TryParse(number, out _);
+        }
+        public static bool IsNumber(string number)
+        {
+            if (string.IsNullOrWhiteSpace(number))
+                return false;
+            return number.All(char.IsDigit);
+        }
     }
 }
