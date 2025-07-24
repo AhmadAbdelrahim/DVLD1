@@ -325,6 +325,9 @@
     <EmbeddedResource Include="Licenses\Controls\ctrlDriverLicenses.resx">
       <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\frmShowPersonLicenseHistory.resx">
+      <DependentUpon>frmShowPersonLicenseHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\International Licenses\Controls\ctrlDriverInternationalLicenseInfo.resx">
       <DependentUpon>ctrlDriverInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -629,6 +632,63 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tests\Test Types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\status32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\fees32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Type32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Applicant32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\CreatedBy32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\License32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AppliedForLicense32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\PassedTest32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\drive id32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\active32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\application id 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\class32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Issue32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\note32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\findDriver32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\License History72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\License History256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Trial32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\retake test.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
