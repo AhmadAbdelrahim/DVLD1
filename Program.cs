@@ -16,7 +16,9 @@ namespace DVLD1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainScreen());
+            //Application.Run(new frmMainScreen());
+
+            Application.Run(new Test1());
 
             //Application.Run(new frmManagePeople());
             //Application.Run(new frmLoginScreen());
