@@ -47,8 +47,8 @@ namespace DVLD1.People
             {
                 MessageBox.Show("Please select a valid search criteria.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }      
-      
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             int personID = int.Parse(textBox1.Text);
@@ -56,7 +56,6 @@ namespace DVLD1.People
             BackData?.Invoke(this, personID);
 
             this.Close();
-
         }
     }
 }

@@ -29,7 +29,9 @@ namespace DVLD1
 
         private void DataBack_Delegate(object sender, int PersonID)
         {
+            MessageBox.Show($"Person ID received: {PersonID}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            ctrlPersonDetails1.LoadPersonInfoByID(PersonID);
         }
     }
 }

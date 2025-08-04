@@ -25,9 +25,9 @@ namespace DVLD1
 
             //Application.Run(new frmManagePeople());
             //Application.Run(new frmLoginScreen());
-            //Application.Run(new frmManageUsers());
+            Application.Run(new frmManageUsers());
             //Application.Run(new frmAddNewUser());
-            Application.Run(new frmFindPerson());
+            //Application.Run(new frmFindPerson());
             //Application.Run(new frmManageDrivers());
 
         }
