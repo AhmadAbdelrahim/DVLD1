@@ -12,6 +12,9 @@ namespace DVLD1
 {
     public partial class frmAddNewUser : Form
     {
+        public delegate void UserAddedEventHandler(object sender, int PersonID);
+        public event UserAddedEventHandler UserAdded;
+
         public frmAddNewUser()
         {
             InitializeComponent();

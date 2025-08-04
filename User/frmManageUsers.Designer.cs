@@ -146,6 +146,7 @@
             this.btnAddNewPerson.Size = new System.Drawing.Size(58, 72);
             this.btnAddNewPerson.TabIndex = 30;
             this.btnAddNewPerson.UseVisualStyleBackColor = true;
+            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
             // 
             // pictureBox1
             // 
@@ -167,14 +168,14 @@
             this.sendEmailToolStripMenuItem,
             this.phoneCallToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(213, 350);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(195, 328);
             // 
             // showDetailsToolStripMenuItem
             // 
             this.showDetailsToolStripMenuItem.Image = global::DVLD1.Properties.Resources.Details_64;
             this.showDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(212, 54);
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(194, 54);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
             // 
             // addNewPersonToolStripMenuItem
@@ -182,7 +183,7 @@
             this.addNewPersonToolStripMenuItem.Image = global::DVLD1.Properties.Resources.ClientAdd48;
             this.addNewPersonToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
-            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(212, 54);
+            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(194, 54);
             this.addNewPersonToolStripMenuItem.Text = "Add New Person";
             // 
             // editToolStripMenuItem
@@ -190,7 +191,7 @@
             this.editToolStripMenuItem.Image = global::DVLD1.Properties.Resources.ClientEdit48;
             this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(212, 54);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(194, 54);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // deleteToolStripMenuItem
@@ -198,7 +199,7 @@
             this.deleteToolStripMenuItem.Image = global::DVLD1.Properties.Resources.ClientDelete48;
             this.deleteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(212, 54);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(194, 54);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // sendEmailToolStripMenuItem
@@ -206,7 +207,7 @@
             this.sendEmailToolStripMenuItem.Image = global::DVLD1.Properties.Resources.Send_Email_48;
             this.sendEmailToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(212, 54);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(194, 54);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
             // 
             // phoneCallToolStripMenuItem
@@ -214,7 +215,7 @@
             this.phoneCallToolStripMenuItem.Image = global::DVLD1.Properties.Resources.Phone_Call2_48;
             this.phoneCallToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(212, 54);
+            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(194, 54);
             this.phoneCallToolStripMenuItem.Text = "Phone Call";
             // 
             // frmManageUsers

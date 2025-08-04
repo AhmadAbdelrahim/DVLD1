@@ -83,6 +83,11 @@ namespace DVLD1
             }
         }
 
-       
+        private void btnAddNewPerson_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser addupdateuser = new frmAddUpdateUser();
+
+            addupdateuser.ShowDialog();
+        }
     }
 }

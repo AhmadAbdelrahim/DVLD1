@@ -133,23 +133,47 @@
     <Compile Include="Appliction\Rlease Detained License\frmReleaseDetainedLicenseApplication.Designer.cs">
       <DependentUpon>frmReleaseDetainedLicenseApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Audience.cs">
+    <Compile Include="Z Tests\Audience.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Audience.Designer.cs">
+    <Compile Include="Z Tests\Audience.Designer.cs">
       <DependentUpon>Audience.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ball.cs">
+    <Compile Include="Z Tests\Ball.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ball.Designer.cs">
+    <Compile Include="Z Tests\Ball.Designer.cs">
       <DependentUpon>Ball.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ball1.cs">
+    <Compile Include="Z Tests\Ball1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ball1.Designer.cs">
+    <Compile Include="Z Tests\Ball1.Designer.cs">
       <DependentUpon>Ball1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Controls\ctrlPersonDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\Controls\ctrlPersonDetails.Designer.cs">
+      <DependentUpon>ctrlPersonDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Z Tests\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Z Tests\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Z Tests\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Z Tests\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Global Classes\clsFormat.cs" />
     <Compile Include="Global Classes\clsGlobal.cs" />
@@ -225,22 +249,22 @@
     <Compile Include="People\frmFindPerson.Designer.cs">
       <DependentUpon>frmFindPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player.cs">
+    <Compile Include="Z Tests\Player.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Player.Designer.cs">
+    <Compile Include="Z Tests\Player.Designer.cs">
       <DependentUpon>Player.cs</DependentUpon>
     </Compile>
-    <Compile Include="Refree.cs">
+    <Compile Include="Z Tests\Refree.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Refree.Designer.cs">
+    <Compile Include="Z Tests\Refree.Designer.cs">
       <DependentUpon>Refree.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test1.cs">
+    <Compile Include="Z Tests\Test1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test1.Designer.cs">
+    <Compile Include="Z Tests\Test1.Designer.cs">
       <DependentUpon>Test1.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests\Controls\ctrlScheduledTest.cs">
@@ -367,8 +391,20 @@
     <EmbeddedResource Include="Appliction\Local Driving License\ctrlDrivingLicenseApplicationInfo.resx">
       <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ball1.resx">
+    <EmbeddedResource Include="Z Tests\Ball1.resx">
       <DependentUpon>Ball1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Controls\ctrlPersonDetails.resx">
+      <DependentUpon>ctrlPersonDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Z Tests\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Z Tests\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Controls\ctrlDriverLicenses.resx">
       <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
@@ -397,7 +433,10 @@
     <EmbeddedResource Include="People\Controls\ctrPersonInformation.resx">
       <DependentUpon>ctrPersonInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test1.resx">
+    <EmbeddedResource Include="People\frmFindPerson.resx">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Z Tests\Test1.resx">
       <DependentUpon>Test1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\Controls\ctrlScheduledTest.resx">

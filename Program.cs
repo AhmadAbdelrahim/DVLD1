@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD1.People;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,12 +19,15 @@ namespace DVLD1
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmMainScreen());
 
-            Application.Run(new Test1());
+            //Application.Run(new Test1());
+
+            //Application.Run(new Form1());
 
             //Application.Run(new frmManagePeople());
             //Application.Run(new frmLoginScreen());
             //Application.Run(new frmManageUsers());
             //Application.Run(new frmAddNewUser());
+            Application.Run(new frmFindPerson());
             //Application.Run(new frmManageDrivers());
 
         }
