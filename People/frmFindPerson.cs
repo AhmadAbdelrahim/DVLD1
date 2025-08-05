@@ -55,7 +55,7 @@ namespace DVLD1.People
 
             BackData?.Invoke(this, personID);
 
-            this.Close();
+            //this.Close();
         }
     }
 }

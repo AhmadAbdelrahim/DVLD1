@@ -133,6 +133,12 @@
     <Compile Include="Appliction\Rlease Detained License\frmReleaseDetainedLicenseApplication.Designer.cs">
       <DependentUpon>frmReleaseDetainedLicenseApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="People\Controls\ctrlPersonDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\Controls\ctrlPersonDetailsWithFilter.Designer.cs">
+      <DependentUpon>ctrlPersonDetailsWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Z Tests\Audience.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -388,8 +394,17 @@
     <EmbeddedResource Include="Appliction\Controls\ctrlApplicationBasicInfo.resx">
       <DependentUpon>ctrlApplicationBasicInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Appliction\International License\frmNewInternationalLicenseApplication.resx">
+      <DependentUpon>frmNewInternationalLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Appliction\Local Driving License\ctrlDrivingLicenseApplicationInfo.resx">
       <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appliction\Local Driving License\frmAddUpdateLocalDrivingLicenseApplication.resx">
+      <DependentUpon>frmAddUpdateLocalDrivingLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Controls\ctrlPersonDetailsWithFilter.resx">
+      <DependentUpon>ctrlPersonDetailsWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Z Tests\Ball1.resx">
       <DependentUpon>Ball1.cs</DependentUpon>
@@ -783,6 +798,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\retake test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\UserAdd32-2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
